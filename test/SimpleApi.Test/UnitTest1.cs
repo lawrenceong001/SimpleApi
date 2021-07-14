@@ -23,6 +23,7 @@ namespace SimpleApi.Test
 
       WeatherForecastController controller = new WeatherForecastController(logger);
 
+      // test get random forecasts
       var forecasts = controller.Get();
       var count = ((WeatherForecast[])forecasts).Length;
       // check to make sure 5 records come back
