@@ -25,6 +25,7 @@ namespace SimpleApi.Test
 
       var forecasts = controller.Get();
       var count = ((WeatherForecast[])forecasts).Length;
+      // check to make sure 5 records come back
       Assert.Equal(5,count);
     }
 
