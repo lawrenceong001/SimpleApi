@@ -27,13 +27,13 @@ steps:
 #    nugetConfigPath: 'nuget.config'
 - task: DotNetCoreCLI@2
   inputs:
-    command: 'build'
-    projects: '**/*.csproj'
+    command: test
+    projects: '**/*.Test/*.csproj'
     arguments: '--configuration $(BuildConfiguration)'
 - task: DotNetCoreCLI@2
   inputs:
-    command: 'test'
-    projects: '**/*.Test.csproj'
+    command: 'build'
+    projects: '**/*.csproj'
     arguments: '--configuration $(BuildConfiguration)'
 - task: DotNetCoreCLI@2
   displayName: Publish
